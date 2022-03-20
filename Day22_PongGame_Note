@@ -1,0 +1,35 @@
+Class - board
+Class - ball
+Class - score
+
+create screen
+create paddle
+create another paddle
+##create a ball and ball moving straight line ; Make a ball moving, by go to new_x and new_y position and delay update screen of 0.1 to slowdown the movement
+while game_is_on:
+    time.sleep(0.1)
+    screen.update()
+    ball.move()
+
+ def move(self):
+        self.penup()
+        new_x =self.xcor() + 10
+        new_y =self.ycor() + 10
+        self.goto((new_x, new_y))
+
+
+## it is a method that detect ball collision the wall: change y coordinate to the opposite direction
+        self.x_move = 10
+        self.y_move = 10
+     def bounce(self):
+       self.y_move *= -1
+
+## detect ball collision the paddle ; detect ball and paddle's distance and also the x_cor boundry
+ball.distance(paddle)
+
+detect when paddle misses
+keep score
+
+#Make ball move faster
+
+time.sleep (0.01) will update screen faster therefore, ball will move faster thantime.sleep(0.1)
